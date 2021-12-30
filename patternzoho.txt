@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Patternzoho {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String str= sc.next();
+       //String str="welcome";
+        int length= str.length();
+        int mid=length/2;
+        int temp=length;
+        String S1=str.substring(mid);
+        String S2=str.substring(0,mid);
+        //final variable
+        String fnl=S1+S2;
+        //System.out.println(fnl);
+        for(int i=0;i<length;i++) {
+            for (int j =temp ; j > 0; j--) {
+                System.out.print(" ");
+            }
+            for(int k=0;k<=i;k++){
+            System.out.print(fnl.charAt(k));}
+            System.out.println("");
+            temp--;
+        }
+    }
+}
